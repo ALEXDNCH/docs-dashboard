@@ -3,12 +3,16 @@
   import UiContainer from "@/components/ui/UiContainer.vue";
   import { useDocsStore } from "@/stores/docs.store.ts";
   import { useDocsSearchQuery } from "@/composables/useDocsSearchQuery";
-  import UiLoader from "@/components/ui/UiLoader.vue";
   import UiState from "@/components/ui/UiState.vue";
-  import DocListItems from "@/components/dashboard/DocListItems.vue";
   import { storeToRefs } from "pinia";
-  import { computed } from "vue";
-  import DashPreview from "@/components/dashboard/DashPreview.vue";
+  import { computed, defineAsyncComponent } from "vue";
+
+  const UiLoader = defineAsyncComponent(() => import("@/components/ui/UiLoader.vue"));
+
+  const DocListItems = defineAsyncComponent(
+    () => import("@/components/dashboard/DocListItems.vue"),
+  );
+  const DashPreview = defineAsyncComponent(() => import("@/components/dashboard/DashPreview.vue"));
 
   const docsStore = useDocsStore();
   const { inputSearchValue, selectedDoc } = storeToRefs(docsStore);
