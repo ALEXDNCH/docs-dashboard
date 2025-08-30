@@ -1,7 +1,8 @@
 ## APP CONFIG
 ```ts
 // src/app.config.ts
-export const DELAY_FOR_QUERY = 1000;
+const DELAY_FOR_QUERY = 1000;
+const IS_ERROR_FOR_QUERY = false;
 ```
 
 ## Start the Project
