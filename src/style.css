@@ -1,0 +1,77 @@
+@import "assets/styles/reset.css";
+@import "assets/styles/utilities.css";
+@import "@fontsource/montserrat/400";
+@import "@fontsource/montserrat/600";
+@import "@fontsource/montserrat/700";
+
+:root {
+  --font-family-base: "Montserrat", sans-serif;
+  --line-height-base: 1.5;
+  --font-weight-base: 400;
+
+  --height-dashboard: 60vh;
+
+  --rounded-base: 8px;
+  --rounded-md: 10px;
+
+  --box-shadow-base: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+
+  --color-dark-100: #212529;
+
+  --color-gray-500: #6c757d;
+  --color-gray-400: #e0e0e0;
+  --color-gray-300: #e9ecef;
+  --color-gray-200: #fbfbfb;
+  --color-gray-100: #fdfdfd;
+
+  --color-black: #000;
+  --color-white: #fff;
+
+  --color-danger: #dc3545;
+  --color-danger-hover: #bb2d3b;
+
+  --color-blue: #0d6efd;
+  --color-blue-hover: #0b5ed7;
+
+  --font-size-sm: 0.875rem; /* 14px */
+  --font-size-base: 1rem; /* 16px */
+  --font-size-lg: 2rem; /* 32px */
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (max-width: 767px) {
+  :root {
+    --font-size-sm: 0.8125rem; /* 13px (−7%) */
+    --font-size-base: 0.9375rem; /* 15px (−6%) */
+    --font-size-lg: 1.75rem; /* 28px (−12%) */
+  }
+}
+
+@media (max-width: 567px) {
+  :root {
+    --font-size-sm: 0.75rem; /* 12px (−14%) */
+    --font-size-base: 0.875rem; /* 14px (−12%) */
+    --font-size-lg: 1.5rem; /* 24px (−25%) */
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family-base), sans-serif;
+  font-weight: var(--font-weight-base);
+  line-height: var(--line-height-base);
+  background-color: var(--color-gray-200);
+  color: var(--color-black);
+}
